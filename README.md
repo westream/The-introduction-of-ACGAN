@@ -6,7 +6,7 @@
 
 ## Introduction
 >The original GAN uses binary classification errors as a measure of how close the true distribution is to the generated distribution. When the discriminator is the optimal discriminator, the loss function of the generator is equivalent to the JS divergence between the true distribution and the generated distribution.
-![gan](https://github.com/westream/image/gan.jpg "gan")
+![gan](/image/gan.jpg "gan")
  
 >CGAN introduces a conditional variable c in both the generation model G and the discriminant model D. As it trains, the discriminator inputs correctly matched labels and samples. When the discriminator training is completed, the discriminator's output will be true only if the discriminator inputs both real samples and labels matching the real samples at the same time. When the generator is trained, its input is random noise and artificially designed labels, and its output is the data corresponding to the labels. Train the generator to send the output data of the generator and the label of the input generator to the discriminator. This is because the discriminator's output will only be true if the discriminator inputs both real samples and labels that match the real samples. In order to make the discriminator output true at this time, the generator must learn to generate a real picture according to the label.
   
